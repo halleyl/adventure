@@ -4,7 +4,17 @@ var name = prompt("Welcome, brave adventurer! What is your name?")
 // Enter greeting and capitalize first letter of name
 document.querySelector("#greeting").innerHTML = ("Hi " + name.toUpperCase(name)[0] + name.slice(1) + ", click the button below to start your adventure!")
 
+var playCount = 0
+
 function treasureHunt() {
+  
+  // Remove the old donut for the next playthrough
+  if(playCount > 0) {
+    var images = document.getElementsByTagName('img')
+    while(images.length > 0) {
+      images[0].parentNode.removeChild(images[0])
+    }
+  }
   
   // Define the size of the gameplay area
   var maxX = 4
@@ -158,6 +168,8 @@ function treasureHunt() {
         document.getElementById(cellChosen).innerHTML = "<img src='images/donut.png' alt=''>";
         
         document.querySelector("#greeting").innerHTML = ("You found the donut, " + name.toUpperCase(name)[0] + name.slice(1) + "! Click below to look again.")
+        
+        playCount = playCount + 1
                 
       }
     }

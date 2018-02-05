@@ -26,18 +26,17 @@ p {
 }
 
 .cell {
-  background-image: url(images/paper.jpg);
+  background-image: url("images/paper.jpg");
   border: 1px solid black;
   width: 5rem;
   height: 5rem;
 }
 
-.spotmark {
-  background-color: red;
-}
-
-.donut {
-  background-image: url("images/donut.png")
+.middle {
+  background-image: url("images/start.png");
+  border: 1px solid black;
+  width: 5rem;
+  height: 5rem;
 }
 
 img {
