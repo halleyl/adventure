@@ -1,13 +1,13 @@
 // Get user's name
 var name = prompt("Welcome, brave adventurer! What is your name?")
 
-document.querySelector("#greeting").innerHTML = ("Hi " + name + ", click the button below to start your adventure!")
+// Enter greeting and capitalize first letter of name
+document.querySelector("#greeting").innerHTML = ("Hi " + name.toUpperCase(name)[0] + name.slice(1) + ", click the button below to start your adventure!")
 
 function treasureHunt() {
+ 
   
-  // If the game has already been played, remove the donut
-  
-  
+     
   // Define the size of the gameplay area
   var maxX = 4
   var maxY = 4
@@ -157,8 +157,9 @@ function treasureHunt() {
         treasureFound = true
         console.log("You found the delicious donut!")
 
-        document.getElementById(cellChosen).innerHTML = "<img src='images/donut.png'>";
-
+        document.getElementById(cellChosen).innerHTML = "<img src='images/donut.png' alt=''>";
+        
+        document.querySelector("#greeting").innerHTML = ("You found the donut, " + name.toUpperCase(name)[0] + name.slice(1) + "! Click below to look again.")
       }
     }
   } else {
