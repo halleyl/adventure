@@ -158,7 +158,7 @@ function treasureHunt() {
         document.getElementById(cellChosen).innerHTML = "<img src='images/donut.png' alt=''>";
         
         document.querySelector("#greeting").innerHTML = ("You found the donut, " + name.toUpperCase(name)[0] + name.slice(1) + "! Click below to look again.")
-        
+                
       }
     }
   } else {
