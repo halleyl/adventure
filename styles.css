@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 100%;
   background-color: floralwhite;
@@ -24,8 +30,6 @@ p {
   border: 1px solid black;
   width: 5rem;
   height: 5rem;
-  background-color: lightgray;
-  text-align: center;
 }
 
 .spotmark {
@@ -46,6 +50,8 @@ button {
   background-color: darkmagenta;
   display: block;
   margin: 1rem auto;
+  padding: .5rem;
+  width: 25rem;
 }
 
 p {

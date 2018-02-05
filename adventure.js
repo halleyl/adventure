@@ -5,9 +5,7 @@ var name = prompt("Welcome, brave adventurer! What is your name?")
 document.querySelector("#greeting").innerHTML = ("Hi " + name.toUpperCase(name)[0] + name.slice(1) + ", click the button below to start your adventure!")
 
 function treasureHunt() {
- 
   
-     
   // Define the size of the gameplay area
   var maxX = 4
   var maxY = 4
@@ -160,6 +158,7 @@ function treasureHunt() {
         document.getElementById(cellChosen).innerHTML = "<img src='images/donut.png' alt=''>";
         
         document.querySelector("#greeting").innerHTML = ("You found the donut, " + name.toUpperCase(name)[0] + name.slice(1) + "! Click below to look again.")
+        
       }
     }
   } else {
