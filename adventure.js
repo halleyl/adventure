@@ -4,6 +4,7 @@ var name = prompt("Welcome, brave adventurer! What is your name?")
 // Enter greeting and capitalize first letter of name
 document.querySelector("#greeting").innerHTML = ("Hi " + name.toUpperCase(name)[0] + name.slice(1) + ", click the button below to start your adventure!")
 
+// Keep track of number of games played
 var playCount = 0
 
 function treasureHunt() {
@@ -37,7 +38,7 @@ function treasureHunt() {
     var treasureFound = false
 
     // Here's a whole big thing to correspond X+Y coords with cell locations
-
+    
     if(treasureX == 0 && treasureY == 0) {
       var cellChosen = 20
     } else if(treasureX == 1 && treasureY == 0) {
@@ -167,8 +168,9 @@ function treasureHunt() {
 
         document.getElementById(cellChosen).innerHTML = "<img src='images/donut.png' alt=''>";
         
-        document.querySelector("#greeting").innerHTML = ("You found the donut, " + name.toUpperCase(name)[0] + name.slice(1) + "! Click below to look again.")
+        document.querySelector("#greeting").innerHTML = ("You found the donut, " + name.toUpperCase(name)[0] + name.slice(1) + "! Click the button to adventure again.")
         
+        // Increment play count
         playCount = playCount + 1
                 
       }
