@@ -29,16 +29,16 @@ function treasureHunt() {
   var treasureX = Math.floor(Math.random() * 5)
   var treasureY = Math.floor(Math.random() * 5)
 
+  // Location shown in console, in case you want spoilers
   console.log("Psst, the treasure is at " + treasureX + "X and " + treasureY + "Y")
 
-  // Create conditional so treasure isn't in the cell that the user starts in (x2 y2) -- and start over if it is
+  // Create conditional so treasure isn't in the cell that the user starts in (x2 y2) -- and start over if it is (see bottom)
   if(treasureX != 2 || treasureY != 2) {
 
     // Set a variable to control the loop
     var treasureFound = false
 
-    // Here's a whole big thing to correspond X+Y coords with cell locations
-    
+    // Big conditional to correspond X+Y coords with cell locations
     if(treasureX == 0 && treasureY == 0) {
       var cellChosen = 20
     } else if(treasureX == 1 && treasureY == 0) {
@@ -116,7 +116,7 @@ function treasureHunt() {
           userY = newY
 
         } else {
-          console.log("There is a forbidding mountain range in that direction. You shall not pass!")
+          alert("There is a forbidding mountain range to the NORTH. Try a different direction.")
         }
 
       } else if(direction == "east") {
@@ -128,7 +128,7 @@ function treasureHunt() {
           userX = newX
           userY = newY
         } else {
-          console.log("There is a forbidding mountain range in that direction. You shall not pass!")
+          alert("There is a forbidding mountain range to the EAST. Try a different direction.")
         }
 
       } else if(direction == "south") {
@@ -140,7 +140,7 @@ function treasureHunt() {
           userX = newX
           userY = newY
         } else {
-          console.log("There is a forbidding mountain range in that direction. You shall not pass!")
+          alert("There is a forbidding mountain range to the SOUTH. Try a different direction.")
         }
 
       } else if(direction == "west") {
@@ -153,7 +153,7 @@ function treasureHunt() {
           userX = newX
           userY = newY
         } else {
-          console.log("There is a forbidding mountain range in that direction. You shall not pass!")
+          alert("There is a forbidding mountain range to the WEST. Try a different direction.")
         }
 
       } else {
